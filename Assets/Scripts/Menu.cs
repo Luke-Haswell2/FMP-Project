@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-
-
 public class Menu : MonoBehaviour
 {
     [SerializeField] AudioMixer mixerMusic;
@@ -67,6 +65,5 @@ public class Menu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-
     }
 }

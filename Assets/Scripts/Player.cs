@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         isJumping = false;
-
     }
 
     void Update()
@@ -71,7 +70,6 @@ public class Player : MonoBehaviour
         {
             LoadMenu();
         }
-
     }
 
     public void LoadMenu()
@@ -100,7 +98,6 @@ public class Player : MonoBehaviour
     }
     void OnCollisionExit2D(Collision2D collision)
     {
-
         if (collision.gameObject.tag == "Grass")
         {
             touchingPlatform = false;
