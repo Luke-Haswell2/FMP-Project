@@ -53,7 +53,7 @@ public class Menu : MonoBehaviour
         {
             logic = 0;
             musicSlider.interactable = false;
-            SetVolumeMusic(-50);
+            SetVolumeMusic(-60);
         }
     }
     public void LoadGame()
