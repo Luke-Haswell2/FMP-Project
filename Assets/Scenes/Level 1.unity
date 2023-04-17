@@ -2376,7 +2376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowSpeed: 2
-  yOffset: 0.5
+  yOffset: 1
   target: {fileID: 637391593}
 --- !u!4 &665459541 stripped
 Transform:
