@@ -82,18 +82,17 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Grass")
         {
             touchingPlatform = true;
+            print("Grass");
         }
         if (collision.gameObject.tag == "Soil")
         {
             touchingPlatform = true;
+            print("Soil");
         }
         if (collision.gameObject.tag == "Rock")
         {
             touchingPlatform = true;
-        }
-        if (collision.gameObject.tag == "Water")
-        {
-            touchingPlatform = true;
+            print("Rock");
         }
     }
     void OnCollisionExit2D(Collision2D collision)
@@ -107,10 +106,6 @@ public class Player : MonoBehaviour
             touchingPlatform = false;
         }
         if (collision.gameObject.tag == "Rock")
-        {
-            touchingPlatform = false;
-        }
-        if (collision.gameObject.tag == "Water")
         {
             touchingPlatform = false;
         }
