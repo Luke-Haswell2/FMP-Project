@@ -3717,10 +3717,12 @@ MonoBehaviour:
 
     Left or A: Move left
 
-    B: Attack (Throw)
+    Space: Jump
 
-    X:
-    Return to menu'
+    B:
+    Attack (Throw)
+
+    X: Return To Menu'
 --- !u!222 &1264689971
 CanvasRenderer:
   m_ObjectHideFlags: 0
