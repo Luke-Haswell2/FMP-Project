@@ -10,12 +10,18 @@ public class Player : MonoBehaviour
     SpriteRenderer sr;
     bool touchingPlatform;
     private Animator anim;
+
     bool isJumping;
     bool ismoving;
     bool SoundActive;
+
     public AudioSource Grass;
     public AudioSource Soil;
     public AudioSource Rock;
+
+    public Projectile ProjectilePrefab;
+    public Transform LaunchOffset;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -76,6 +82,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown("b"))
         {
             anim.SetBool("Throw", true);
+            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
