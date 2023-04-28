@@ -1441,7 +1441,7 @@ MonoBehaviour:
   Grass: {fileID: 1681932096}
   Soil: {fileID: 171103931}
   Rock: {fileID: 2059454220}
-  ProjectilePrefab: {fileID: 4003656763716818837, guid: 4756d0b85dcfc184284191fc262a0e4f, type: 3}
+  ProjectilePrefab: {fileID: 4003656763716818837, guid: 3cf2e4c43ce2ab040b02dd78a110f824, type: 3}
   LaunchOffset: {fileID: 17404505}
 --- !u!212 &932533945
 SpriteRenderer:

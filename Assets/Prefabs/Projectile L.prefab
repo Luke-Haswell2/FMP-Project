@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6316069326492138882}
-  m_LocalRotation: {x: -0, y: -0, z: -0.4011392, w: 0.9160172}
+  m_LocalRotation: {x: -0, y: -0, z: 0.91490144, w: 0.40367737}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7566607328868663148}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -47.299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 132.384}
 --- !u!212 &736240445299878881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 7566607328868663148}
   - component: {fileID: 7566607328868663151}
   - component: {fileID: 7566607328868663150}
-  - component: {fileID: 4003656763716818837}
+  - component: {fileID: 4888572956795544299}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Projectile L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4003656763716818837
+--- !u!114 &4888572956795544299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7566607328868663153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfecfd42cfe463c40bfee9b98994e27b, type: 3}
+  m_Script: {fileID: 11500000, guid: 44ca1180a07920f4f893b1beb5841a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 7

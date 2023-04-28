@@ -13,7 +13,7 @@ public class Boss : MonoBehaviour
     public float speed;
     private Animator anim;
     private float timer;
-    public Projectile ProjectilePrefab;
+    public BossProjectile ProjectilePrefab;
     public Transform LaunchOffset;
 
     void Start()

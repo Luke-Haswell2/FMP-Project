@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     bool isJumping;
     bool ismoving;
     bool SoundActive;
+    bool left;
 
     public AudioSource Grass;
     public AudioSource Soil;
@@ -21,6 +22,8 @@ public class Player : MonoBehaviour
 
     public Projectile ProjectilePrefab;
     public Transform LaunchOffset;
+    public ProjectileL ProjectilePrefabL;
+    public Transform LaunchOffsetL;
 
     void Start()
     {
@@ -30,6 +33,7 @@ public class Player : MonoBehaviour
         isJumping = false;
         ismoving = false;
         SoundActive = true;
+        left = false;
     }
 
     void Update()
@@ -44,6 +48,7 @@ public class Player : MonoBehaviour
             anim.SetBool("Walk", true);
             sr.flipX = false;
             ismoving = true;
+            left = false;
         }
         if (Input.GetKey("d"))
         {
@@ -51,6 +56,7 @@ public class Player : MonoBehaviour
             anim.SetBool("Walk", true);
             sr.flipX = false;
             ismoving = true;
+            left = false;
         }
         if (Input.GetKey("left"))
         {
@@ -58,6 +64,7 @@ public class Player : MonoBehaviour
             anim.SetBool("Walk", true);
             sr.flipX = true;
             ismoving = true;
+            left = true;
         }
         if (Input.GetKey("a"))
         {
@@ -65,6 +72,7 @@ public class Player : MonoBehaviour
             anim.SetBool("Walk", true);
             sr.flipX = true;
             ismoving = true;
+            left = true;
         }
         if (Input.GetKeyDown("space") && touchingPlatform)
         {
@@ -82,7 +90,14 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown("b"))
         {
             anim.SetBool("Throw", true);
-            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+            if (left == true)
+            {
+                Instantiate(ProjectilePrefabL, LaunchOffsetL.position, transform.rotation);
+            }
+            if (left == false)
+            {
+                Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+            } 
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
