@@ -156,6 +156,18 @@ public class Player : MonoBehaviour
             Soil.enabled = false;
             Rock.enabled = true;
         }
+        if (collision.gameObject.tag == "EProjectile")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (collision.gameObject.tag == "Boss")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
     void OnCollisionExit2D(Collision2D collision)
     {

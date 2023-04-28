@@ -7,6 +7,12 @@ TagManager:
   - Grass
   - Soil
   - Rock
+  - Fix
+  - Water
+  - Enemy
+  - Boss
+  - EProjectile
+  - Projectile
   layers:
   - Default
   - TransparentFX

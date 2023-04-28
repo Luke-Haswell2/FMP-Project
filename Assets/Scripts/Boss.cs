@@ -57,4 +57,11 @@ public class Boss : MonoBehaviour
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Projectile")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
