@@ -19,13 +19,17 @@ public class Collectable : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Collect == 1) //Watermelon
+        if (collision.gameObject.tag == "Player")
         {
+            if (Collect == 1) //Watermelon load next scene
+            {
 
-        }
-        if (Collect == 2)
-        {
+            }
 
+            if (Collect == 2)
+            {
+
+            }
         }
     }
 }
