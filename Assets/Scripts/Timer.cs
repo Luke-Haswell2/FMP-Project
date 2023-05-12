@@ -11,11 +11,6 @@ public class Timer : MonoBehaviour
     [Header("Timer Settings")]
     public float currentTime;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         currentTime += Time.deltaTime;
