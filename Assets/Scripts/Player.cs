@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
     bool ismoving;
     bool SoundActive;
     bool left;
+    bool rightOn;
+    bool leftOn;
 
     public AudioSource Grass;
     public AudioSource Soil;
@@ -24,6 +27,22 @@ public class Player : MonoBehaviour
     public Transform LaunchOffset;
     public ProjectileL ProjectilePrefabL;
     public Transform LaunchOffsetL;
+
+    PlayerControls controls;
+
+    void Awake()
+    {
+        controls = new PlayerControls();
+
+        controls.Gameplay.Jump.performed += ctx => Jump();
+        controls.Gameplay.Throw.performed += ctx => Throw();
+        controls.Gameplay.Menu.performed += ctx => LoadMenu();
+        controls.Gameplay.Right.performed += ctx => Right();
+        controls.Gameplay.Left.performed += ctx => Left();
+
+        controls.Gameplay.Right.canceled += ctx => Right2();
+        controls.Gameplay.Left.canceled += ctx => Left2();
+    }
 
     void Start()
     {
@@ -117,8 +136,60 @@ public class Player : MonoBehaviour
         {
             ismoving = false;
         }
+        if (rightOn == true)
+        {
+            rb.velocity = new Vector2(3, rb.velocity.y);
+            anim.SetBool("Walk", true);
+            sr.flipX = false;
+            ismoving = true;
+            left = false;
+        }
+        if (leftOn == true)
+        {
+            rb.velocity = new Vector2(-3, rb.velocity.y);
+            anim.SetBool("Walk", true);
+            sr.flipX = true;
+            ismoving = true;
+            left = true;
+        }
     }
 
+    void Jump()
+    {
+        if (touchingPlatform == true)
+        {
+            rb.velocity = new Vector2(0, 8);
+            isJumping = true;
+        }
+    }
+    void Throw()
+    {
+        anim.SetBool("Throw", true);
+        if (left == true)
+        {
+            Instantiate(ProjectilePrefabL, LaunchOffsetL.position, transform.rotation);
+        }
+        if (left == false)
+        {
+            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+        }
+    }
+    void Right()
+    {
+        rightOn = true;
+    }
+    void Right2()
+    {
+        rightOn = false;
+    }
+    void Left()
+    {
+        leftOn = true;
+    }
+    void Left2()
+    {
+        leftOn = false;
+    }
     public void LoadMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -198,5 +269,13 @@ public class Player : MonoBehaviour
         {
             SoundActive = true;
         }
+    }
+    void OnEnable()
+    {
+        controls.Gameplay.Enable();
+    }
+    void OnDisable()
+    {
+        controls.Gameplay.Disable();
     }
 }
