@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sr;
     bool touchingPlatform;
-    private Animator anim;
+    Animator anim;
 
     bool isJumping;
     bool ismoving;

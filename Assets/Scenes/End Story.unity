@@ -551,7 +551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382489617}
   m_Layer: 0
-  m_Name: Credits
+  m_Name: Continue?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1493,7 +1493,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Continue to credits?
+  m_Text: 'Continue?
 
     You can still use X to return to the Main menu.'
 --- !u!222 &1394827694
