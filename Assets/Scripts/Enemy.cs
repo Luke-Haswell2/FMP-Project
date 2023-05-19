@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject pointA;
-    public GameObject pointB;
     Rigidbody2D rb;
     SpriteRenderer sr;
+    private Animator anim;
+
+    public GameObject pointA;
+    public GameObject pointB;
     private Transform currentPoint;
     public float speed;
-    private Animator anim;
 
     void Start()
     {

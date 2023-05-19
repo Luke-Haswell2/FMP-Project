@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    Rigidbody2D rb;
+    SpriteRenderer sr;
+    private Animator anim;
+
     public GameObject pointA;
     public GameObject pointB;
     public GameObject pointC;
-    Rigidbody2D rb;
-    SpriteRenderer sr;
-    private Transform currentPoint;
     public float speed;
-    private Animator anim;
+    private Transform currentPoint;
     private float timer;
     public BossProjectile ProjectilePrefab;
     public Transform LaunchOffset;

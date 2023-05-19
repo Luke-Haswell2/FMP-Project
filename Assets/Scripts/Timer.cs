@@ -5,10 +5,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    [Header("component")]
     public TextMeshProUGUI timerText;
 
-    [Header("Timer Settings")]
     public float currentTime;
 
     void Update()

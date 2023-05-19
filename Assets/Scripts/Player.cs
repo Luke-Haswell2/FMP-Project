@@ -9,9 +9,10 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D rb;
     SpriteRenderer sr;
-    bool touchingPlatform;
     Animator anim;
+    PlayerControls controls;
 
+    bool touchingPlatform;
     bool isJumping;
     bool ismoving;
     bool SoundActive;
@@ -27,8 +28,6 @@ public class Player : MonoBehaviour
     public Transform LaunchOffset;
     public ProjectileL ProjectilePrefabL;
     public Transform LaunchOffsetL;
-
-    PlayerControls controls;
 
     void Awake()
     {
@@ -49,6 +48,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
         isJumping = false;
         ismoving = false;
         SoundActive = true;
