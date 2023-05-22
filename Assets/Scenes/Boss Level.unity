@@ -12019,7 +12019,7 @@ MonoBehaviour:
   pointB: {fileID: 1925801884}
   pointC: {fileID: 1738840881}
   speed: 2
-  ProjectilePrefab: {fileID: 5776600466811773038, guid: 8e16cddde0001884db0e5d772473ec42, type: 3}
+  ProjectilePrefab: {fileID: -6532083339321058124, guid: b7aff66d13c7d194c9927a0444b9ed5b, type: 3}
   LaunchOffset: {fileID: 581172150}
 --- !u!50 &1667067835
 Rigidbody2D:
