@@ -264,7 +264,6 @@ public class Player : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "Fix")
         {
             SoundActive = true;
